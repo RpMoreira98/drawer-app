@@ -41,17 +41,17 @@ export default function Drawer() {
   };
 
   return (
-    <div className="p-6 max-w-4xl mx-auto space-y-6">
+    <div className="p-6 max-w-4xl bg-zinc-900 mx-auto space-y-6">
       <h1 className="text-2xl font-bold">🎯 Sorteador CS 5x5</h1>
 
-      <Card>
-        <CardContent className="p-4 space-y-4">
-          <h2 className="font-semibold">Capitães (IGL)</h2>
+      <Card className="bg-zinc-900 text-white">
+        <CardContent className="p-4 space-y-4 text-white">
+          <h2 className="font-semibold">Capitães</h2>
           {capitaes.map((c, i) => (
             <input
               key={i}
               className="border p-2 w-full rounded"
-              placeholder={`IGL do ${i === 0 ? "CT" : "TR"}`}
+              placeholder={`Cabeça de chave do ${i === 0 ? "CT" : "TR"}`}
               value={c}
               onChange={(e) => {
                 const novo = [...capitaes];
@@ -63,7 +63,7 @@ export default function Drawer() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="bg-zinc-900 text-white">
         <CardContent className="p-4 space-y-4">
           <h2 className="font-semibold">Jogadores</h2>
           {jogadores.map((j, i) => (
@@ -100,8 +100,8 @@ export default function Drawer() {
       </AnimatePresence>
 
       {resultado && (
-        <div className="grid grid-cols-2 gap-4">
-          <Card>
+        <div className="grid  grid-cols-2 gap-4">
+          <Card className="bg-zinc-900 text-white">
             <CardContent className="p-4">
               <h2 className="font-bold mb-2">🔵 Counter-Terrorists (CT)</h2>
               <ul className="list-disc ml-5">
@@ -112,8 +112,8 @@ export default function Drawer() {
             </CardContent>
           </Card>
 
-          <Card>
-            <CardContent className="p-4">
+          <Card className="bg-zinc-900 text-white">
+            <CardContent className="p-4 ">
               <h2 className="font-bold mb-2">🟠 Terrorists (TR)</h2>
               <ul className="list-disc ml-5">
                 {resultado.tr.map((j) => (
