@@ -103,7 +103,7 @@ export default function Drawer() {
         <div className="grid  grid-cols-2 gap-4">
           <Card className="bg-zinc-900 text-white">
             <CardContent className="p-4">
-              <h2 className="font-bold mb-2">🔵 Counter-Terrorists (CT)</h2>
+              <h2 className="font-bold mb-2">🔵 Time de {capitaes[0]} </h2>
               <ul className="list-disc ml-5">
                 {resultado.ct.map((j) => (
                   <li key={j}>{j}</li>
@@ -114,7 +114,7 @@ export default function Drawer() {
 
           <Card className="bg-zinc-900 text-white">
             <CardContent className="p-4 ">
-              <h2 className="font-bold mb-2">🟠 Terrorists (TR)</h2>
+              <h2 className="font-bold mb-2">🟠 Time de {capitaes[1]} </h2>
               <ul className="list-disc ml-5">
                 {resultado.tr.map((j) => (
                   <li key={j}>{j}</li>
